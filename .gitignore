@@ -1,0 +1,50 @@
+target/
+backend/target/
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+.env
+.env.*
+*.tsbuildinfo
+Booking-sun/
+!.mvn/wrapper/maven-wrapper.jar
+
+### Database / local data ###
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.dump
+**/database/*.db
+**/database/*.sqlite
+**/database/*.sqlite3
+**/database/*.bak
+**/database/*.dump
+**/data/
+**/tmp/
+
+### Java ###
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+### IDE ###
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+### OS ###
+.DS_Store
+Thumbs.db
