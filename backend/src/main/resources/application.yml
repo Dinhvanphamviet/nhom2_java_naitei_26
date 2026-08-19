@@ -1,10 +1,11 @@
 spring:
   application:
     name: sun-booking-tours
+  profiles:
+    include: secret
   datasource:
     url: jdbc:postgresql://localhost:5432/sun_booking_tours
     username: postgres
-    password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -16,3 +17,7 @@ spring:
 
 server:
   port: 8080
+
+app:
+  jwt:
+    expiration-ms: 86400000
