@@ -48,3 +48,5 @@ replay_pid*
 ### OS ###
 .DS_Store
 Thumbs.db
+
+application-secret.yml
