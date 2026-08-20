@@ -2,28 +2,28 @@
 
 ## Phase 1: Setup
 
-- [ ] T001 [P] [CONFIG] Initialize React frontend project with Vite and Tailwind in `frontend/`
-- [ ] T002 [P] [CONFIG] Initialize Spring Boot backend project in `backend/`
-- [ ] T003 [CONFIG] Configure database connection in `backend/src/main/resources/application.yml`
-- [ ] T004 [DB] Run baseline database schema from `database/schema.sql`
+- [x] T001 [P] [CONFIG] Initialize React frontend project with Vite and Tailwind in `frontend/`
+- [x] T002 [P] [CONFIG] Initialize Spring Boot backend project in `backend/`
+- [x] T003 [CONFIG] Configure database connection in `backend/src/main/resources/application.yml`
+- [x] T004 [DB] Run baseline database schema from `database/schema.sql`
 
 ## Phase 2: Shared Backend Foundation
 
-- [ ] T005 [P] [CONFIG] Setup global exception handler in `backend/src/main/java/com/sunbooking/exception/GlobalExceptionHandler.java`
-- [ ] T006 [P] [SECURITY] Setup JWT utility class in `backend/src/main/java/com/sunbooking/security/JwtUtils.java`
-- [ ] T007 [SECURITY] Setup Spring Security configuration in `backend/src/main/java/com/sunbooking/security/SecurityConfig.java`
-- [ ] T008 [P] [BE-AUTH] Create BaseEntity in `backend/src/main/java/com/sunbooking/entity/BaseEntity.java`
+- [x] T005 [P] [CONFIG] Setup global exception handler in `backend/src/main/java/com/sunbooking/exception/GlobalExceptionHandler.java`
+- [x] T006 [P] [SECURITY] Setup JWT utility class in `backend/src/main/java/com/sunbooking/security/JwtUtils.java`
+- [x] T007 [SECURITY] Setup Spring Security configuration in `backend/src/main/java/com/sunbooking/security/SecurityConfig.java`
+- [x] T008 [P] [BE-AUTH] Create BaseEntity in `backend/src/main/java/com/sunbooking/entity/BaseEntity.java`
 
 ## Phase 3: Authentication (US1)
 
-- [ ] T009 [P] [US1] [BE-AUTH] Create `User` entity in `backend/src/main/java/com/sunbooking/entity/User.java`
+- [x] T009 [P] [US1] [BE-AUTH] Create `User` entity in `backend/src/main/java/com/sunbooking/entity/User.java`
 - [ ] T010 [P] [US1] [BE-AUTH] Create `SocialAccount` entity in `backend/src/main/java/com/sunbooking/entity/SocialAccount.java`
-- [ ] T011 [P] [US1] [BE-AUTH] Create auth request/response DTOs in `backend/src/main/java/com/sunbooking/dto/auth/`
-- [ ] T012 [US1] [BE-AUTH] Create `UserRepository` in `backend/src/main/java/com/sunbooking/repository/UserRepository.java`
+- [x] T011 [P] [US1] [BE-AUTH] Create auth request/response DTOs in `backend/src/main/java/com/sunbooking/dto/auth/`
+- [x] T012 [US1] [BE-AUTH] Create `UserRepository` in `backend/src/main/java/com/sunbooking/repository/UserRepository.java`
 - [ ] T013 [US1] [BE-AUTH] Create `SocialAccountRepository` in `backend/src/main/java/com/sunbooking/repository/SocialAccountRepository.java`
-- [ ] T014 [US1] [BE-AUTH] Implement registration and login in `backend/src/main/java/com/sunbooking/service/AuthService.java`
+- [x] T014 [US1] [BE-AUTH] Implement registration and login in `backend/src/main/java/com/sunbooking/service/AuthService.java`
 - [ ] T015 [US1] [BE-AUTH] Implement social login in `backend/src/main/java/com/sunbooking/service/SocialAuthService.java`
-- [ ] T016 [US1] [BE-AUTH] Implement auth APIs in `backend/src/main/java/com/sunbooking/controller/AuthController.java`
+- [x] T016 [US1] [BE-AUTH] Implement auth APIs in `backend/src/main/java/com/sunbooking/controller/AuthController.java`
 - [ ] T017 [P] [US1] [FE-AUTH] Setup AuthContext for frontend state in `frontend/src/context/AuthContext.tsx`
 - [ ] T018 [US1] [FE-AUTH] Implement auth API client in `frontend/src/services/authService.ts`
 - [ ] T019 [P] [US1] [FE-AUTH] Create Login page in `frontend/src/pages/auth/LoginPage.tsx`
@@ -39,17 +39,17 @@
 
 ## Phase 5: Tour / Category (US2)
 
-- [ ] T026 [P] [US2] [BE-CATEGORY] Create `Category` entity in `backend/src/main/java/com/sunbooking/entity/Category.java`
+- [x] T026 [P] [US2] [BE-CATEGORY] Create `Category` entity in `backend/src/main/java/com/sunbooking/entity/Category.java`
 - [ ] T027 [P] [US2] [BE-TOUR] Create `Tour` entity in `backend/src/main/java/com/sunbooking/entity/Tour.java`
 - [ ] T028 [P] [US2] [BE-TOUR] Create `TourDeparture` entity in `backend/src/main/java/com/sunbooking/entity/TourDeparture.java`
 - [ ] T029 [P] [US2] [BE-TOUR] Create `TourImage` entity in `backend/src/main/java/com/sunbooking/entity/TourImage.java`
-- [ ] T030 [P] [US2] [BE-CATEGORY] Create `CategoryRepository` in `backend/src/main/java/com/sunbooking/repository/CategoryRepository.java`
+- [x] T030 [P] [US2] [BE-CATEGORY] Create `CategoryRepository` in `backend/src/main/java/com/sunbooking/repository/CategoryRepository.java`
 - [ ] T031 [P] [US2] [BE-TOUR] Create `TourRepository` in `backend/src/main/java/com/sunbooking/repository/TourRepository.java`
 - [ ] T032 [P] [US2] [BE-TOUR] Create `TourDepartureRepository` in `backend/src/main/java/com/sunbooking/repository/TourDepartureRepository.java`
-- [ ] T033 [P] [US2] [BE-TOUR] Create tour/category DTOs in `backend/src/main/java/com/sunbooking/dto/tour/`
-- [ ] T034 [US2] [BE-CATEGORY] Implement category listing in `backend/src/main/java/com/sunbooking/service/CategoryService.java`
+- [x] T033 [P] [US2] [BE-TOUR] Create tour/category DTOs in `backend/src/main/java/com/sunbooking/dto/tour/`
+- [x] T034 [US2] [BE-CATEGORY] Implement category listing in `backend/src/main/java/com/sunbooking/service/CategoryService.java`
 - [ ] T035 [US2] [BE-TOUR] Implement tour search/details in `backend/src/main/java/com/sunbooking/service/TourService.java`
-- [ ] T036 [US2] [BE-CATEGORY] Implement category APIs in `backend/src/main/java/com/sunbooking/controller/CategoryController.java`
+- [x] T036 [US2] [BE-CATEGORY] Implement category APIs in `backend/src/main/java/com/sunbooking/controller/CategoryController.java`
 - [ ] T037 [US2] [BE-TOUR] Implement tour public APIs in `backend/src/main/java/com/sunbooking/controller/TourController.java`
 - [ ] T038 [P] [US2] [FE-TOUR] Implement tour API client in `frontend/src/services/tourService.ts`
 - [ ] T039 [US2] [FE-TOUR] Create tour search page in `frontend/src/pages/tours/TourSearchPage.tsx`
@@ -153,7 +153,7 @@
 
 - [ ] T114 [US5] [BE-ADMIN] Implement Admin Tour operations in `backend/src/main/java/com/sunbooking/service/AdminTourService.java`
 - [ ] T115 [US5] [BE-ADMIN] Implement `AdminTourController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminTourController.java`
-- [ ] T116 [US5] [BE-ADMIN] Implement `AdminCategoryController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminCategoryController.java`
+- [x] T116 [US5] [BE-ADMIN] Implement `AdminCategoryController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminCategoryController.java`
 - [ ] T117 [P] [US5] [FE-ADMIN] Implement admin tours API client in `frontend/src/services/admin/adminTourService.ts`
 - [ ] T118 [P] [US5] [FE-ADMIN] Implement admin categories API client in `frontend/src/services/admin/adminCategoryService.ts`
 - [ ] T119 [US5] [FE-ADMIN] Create Admin tours page in `frontend/src/pages/admin/AdminToursPage.tsx`
