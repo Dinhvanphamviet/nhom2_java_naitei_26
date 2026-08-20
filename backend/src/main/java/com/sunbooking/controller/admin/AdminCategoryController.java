@@ -19,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin/categories")
+@PreAuthorize("hasRole('ADMIN')")
 public class AdminCategoryController {
 
     private final CategoryService categoryService;
