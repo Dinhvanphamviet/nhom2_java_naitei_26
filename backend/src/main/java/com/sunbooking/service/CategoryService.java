@@ -3,11 +3,10 @@ package com.sunbooking.service;
 import com.sunbooking.dto.tour.CategoryRequest;
 import com.sunbooking.dto.tour.CategoryResponse;
 import com.sunbooking.entity.Category;
+import com.sunbooking.exception.ResourceNotFoundException;
 import com.sunbooking.repository.CategoryRepository;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -54,8 +53,7 @@ public class CategoryService {
 
     private Category findCategory(Long id) {
         return categoryRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND, "Category not found: " + id));
+            .orElseThrow(() -> new ResourceNotFoundException("Category not found: " + id));
     }
 
     private void apply(Category category, CategoryRequest request) {

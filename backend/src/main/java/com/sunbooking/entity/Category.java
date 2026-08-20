@@ -2,11 +2,16 @@ package com.sunbooking.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "category")
-public class Category {
+@AttributeOverrides({
+    @AttributeOverride(name = "id", column = @Column(name = "category_id"))
+})
+public class Category extends BaseEntity {
 
     @Column(name = "name", nullable = false)
     private String name;
