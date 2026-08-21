@@ -100,9 +100,9 @@
 - [x] T075 [US3] [BE-PAYMENT] Implement scheduled reservation cleanup (cron) to detect expired reservations and invoke release logic in `backend/src/main/java/com/sunbooking/service/ReservationCleanupScheduler.java`
 - [x] T076 [P] [US3] [BE-PAYMENT] Create SePay webhook request DTO in `backend/src/main/java/com/sunbooking/dto/payment/SePayWebhookRequest.java`
 - [x] T077 [US3] [BE-PAYMENT] Implement SePay webhook authentication/verification in `backend/src/main/java/com/sunbooking/service/PaymentWebhookService.java`
-- [ ] T078 [US3] [BE-PAYMENT] Implement webhook transaction matching, idempotency, and capacity confirmation in `backend/src/main/java/com/sunbooking/service/PaymentConfirmationService.java`
-- [ ] T079 [US3] [BE-PAYMENT] Implement SePay webhook endpoint in `backend/src/main/java/com/sunbooking/controller/PaymentWebhookController.java`
-- [ ] T080 [US3] [BE-PAYMENT] Implement payment status query API in `backend/src/main/java/com/sunbooking/controller/PaymentController.java`
+- [x] T078 [US3] [BE-PAYMENT] Implement webhook transaction matching, idempotency, and capacity confirmation in `backend/src/main/java/com/sunbooking/service/PaymentConfirmationService.java`
+- [x] T079 [US3] [BE-PAYMENT] Implement SePay webhook endpoint in `backend/src/main/java/com/sunbooking/controller/PaymentWebhookController.java`
+- [x] T080 [US3] [BE-PAYMENT] Implement payment status query API in `backend/src/main/java/com/sunbooking/controller/PaymentController.java`
 - [ ] T081 [P] [US3] [FE-PAYMENT] Implement payment API client in `frontend/src/services/paymentService.ts`
 - [ ] T082 [US3] [FE-PAYMENT] Create VietQR checkout page in `frontend/src/pages/checkout/VietQrCheckoutPage.tsx`
 - [ ] T083 [US3] [FE-PAYMENT] Implement payment countdown frontend in `frontend/src/components/payment/PaymentCountdown.tsx`
