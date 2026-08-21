@@ -98,8 +98,8 @@
 - [x] T073 [US3] [BE-PAYMENT] Implement payment initialization service (QR info generation) in `backend/src/main/java/com/sunbooking/service/PaymentService.java`
 - [x] T074 [US3] [BE-PAYMENT] Implement atomic capacity reserve, confirm, release, and availability validation in `backend/src/main/java/com/sunbooking/service/CapacityService.java`
 - [x] T075 [US3] [BE-PAYMENT] Implement scheduled reservation cleanup (cron) to detect expired reservations and invoke release logic in `backend/src/main/java/com/sunbooking/service/ReservationCleanupScheduler.java`
-- [ ] T076 [P] [US3] [BE-PAYMENT] Create SePay webhook request DTO in `backend/src/main/java/com/sunbooking/dto/payment/SePayWebhookRequest.java`
-- [ ] T077 [US3] [BE-PAYMENT] Implement SePay webhook authentication/verification in `backend/src/main/java/com/sunbooking/service/PaymentWebhookService.java`
+- [x] T076 [P] [US3] [BE-PAYMENT] Create SePay webhook request DTO in `backend/src/main/java/com/sunbooking/dto/payment/SePayWebhookRequest.java`
+- [x] T077 [US3] [BE-PAYMENT] Implement SePay webhook authentication/verification in `backend/src/main/java/com/sunbooking/service/PaymentWebhookService.java`
 - [ ] T078 [US3] [BE-PAYMENT] Implement webhook transaction matching, idempotency, and capacity confirmation in `backend/src/main/java/com/sunbooking/service/PaymentConfirmationService.java`
 - [ ] T079 [US3] [BE-PAYMENT] Implement SePay webhook endpoint in `backend/src/main/java/com/sunbooking/controller/PaymentWebhookController.java`
 - [ ] T080 [US3] [BE-PAYMENT] Implement payment status query API in `backend/src/main/java/com/sunbooking/controller/PaymentController.java`
