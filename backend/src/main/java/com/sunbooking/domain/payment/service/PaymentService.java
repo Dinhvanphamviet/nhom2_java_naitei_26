@@ -10,6 +10,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.UUID;
+import com.sunbooking.domain.payment.entity.PaymentStatus;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -46,6 +49,26 @@ public class PaymentService {
                 savedPayment.getAmount().toPlainString(), reference);
 
         return mapToResponse(savedPayment, qrUrl);
+    }
+
+    @Transactional
+    public void processExpiredPayments() {
+        // Find PENDING payments older than 15 minutes
+        LocalDateTime threshold = LocalDateTime.now().minusMinutes(15);
+        List<Payment> expiredPayments = paymentRepository.findByStatusAndCreatedAtBefore(
+                PaymentStatus.PENDING, threshold);
+
+        for (Payment payment : expiredPayments) {
+            // Update status to EXPIRED
+            payment.setStatus(PaymentStatus.EXPIRED);
+            paymentRepository.save(payment);
+
+            // Return slots to Tour Departure
+            capacityService.releaseCapacity(
+                    payment.getBooking().getTourDeparture().getId(),
+                    payment.getBooking().getTravelers().size()
+            );
+        }
     }
 
     private PaymentResponse mapToResponse(Payment payment, String qrUrl) {
