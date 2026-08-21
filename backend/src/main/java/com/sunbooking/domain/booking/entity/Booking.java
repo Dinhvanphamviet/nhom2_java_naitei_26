@@ -54,7 +54,7 @@ public class Booking extends BaseEntity {
     @OneToMany(mappedBy = "booking", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<BookingTraveler> travelers = new ArrayList<>();
-    
+
     public void addTraveler(BookingTraveler traveler) {
         travelers.add(traveler);
         traveler.setBooking(this);
