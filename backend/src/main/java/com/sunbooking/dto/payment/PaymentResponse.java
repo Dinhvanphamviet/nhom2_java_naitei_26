@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Builder
 public class PaymentResponse {
     private Long id;
-    private Long bookingId;
+    private String bookingId;
     private BigDecimal amount;
     private String transactionReference;
     private PaymentStatus status;

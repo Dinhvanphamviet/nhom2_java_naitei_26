@@ -91,11 +91,11 @@
 
 ## Phase 8: SePay / VietQR Payment (US3)
 
-- [ ] T069 [P] [US3] [BE-PAYMENT] Create `Payment` entity in `backend/src/main/java/com/sunbooking/entity/Payment.java`
-- [ ] T070 [P] [US3] [BE-PAYMENT] Create payment request/response DTOs in `backend/src/main/java/com/sunbooking/dto/payment/`
-- [ ] T071 [US3] [BE-PAYMENT] Create `PaymentRepository` in `backend/src/main/java/com/sunbooking/repository/PaymentRepository.java`
-- [ ] T072 [US3] [BE-PAYMENT] Setup SePay configuration in `backend/src/main/java/com/sunbooking/config/SePayConfig.java`
-- [ ] T073 [US3] [BE-PAYMENT] Implement payment initialization service (QR info generation) in `backend/src/main/java/com/sunbooking/service/PaymentService.java`
+- [x] T069 [P] [US3] [BE-PAYMENT] Create `Payment` entity in `backend/src/main/java/com/sunbooking/entity/Payment.java`
+- [x] T070 [P] [US3] [BE-PAYMENT] Create payment request/response DTOs in `backend/src/main/java/com/sunbooking/dto/payment/`
+- [x] T071 [US3] [BE-PAYMENT] Create `PaymentRepository` in `backend/src/main/java/com/sunbooking/repository/PaymentRepository.java`
+- [x] T072 [US3] [BE-PAYMENT] Setup SePay configuration in `backend/src/main/java/com/sunbooking/config/SePayConfig.java`
+- [x] T073 [US3] [BE-PAYMENT] Implement payment initialization service (QR info generation) in `backend/src/main/java/com/sunbooking/service/PaymentService.java`
 - [ ] T074 [US3] [BE-PAYMENT] Implement atomic capacity reserve, confirm, release, and availability validation in `backend/src/main/java/com/sunbooking/service/CapacityService.java`
 - [ ] T075 [US3] [BE-PAYMENT] Implement scheduled reservation cleanup (cron) to detect expired reservations and invoke release logic in `backend/src/main/java/com/sunbooking/service/ReservationCleanupScheduler.java`
 - [ ] T076 [P] [US3] [BE-PAYMENT] Create SePay webhook request DTO in `backend/src/main/java/com/sunbooking/dto/payment/SePayWebhookRequest.java`
