@@ -40,17 +40,17 @@
 ## Phase 5: Tour / Category (US2)
 
 - [x] T026 [P] [US2] [BE-CATEGORY] Create `Category` entity in `backend/src/main/java/com/sunbooking/entity/Category.java`
-- [ ] T027 [P] [US2] [BE-TOUR] Create `Tour` entity in `backend/src/main/java/com/sunbooking/entity/Tour.java`
-- [ ] T028 [P] [US2] [BE-TOUR] Create `TourDeparture` entity in `backend/src/main/java/com/sunbooking/entity/TourDeparture.java`
-- [ ] T029 [P] [US2] [BE-TOUR] Create `TourImage` entity in `backend/src/main/java/com/sunbooking/entity/TourImage.java`
+- [x] T027 [P] [US2] [BE-TOUR] Create `Tour` entity in `backend/src/main/java/com/sunbooking/entity/Tour.java`
+- [x] T028 [P] [US2] [BE-TOUR] Create `TourDeparture` entity in `backend/src/main/java/com/sunbooking/entity/TourDeparture.java`
+- [x] T029 [P] [US2] [BE-TOUR] Create `TourImage` entity in `backend/src/main/java/com/sunbooking/entity/TourImage.java`
 - [x] T030 [P] [US2] [BE-CATEGORY] Create `CategoryRepository` in `backend/src/main/java/com/sunbooking/repository/CategoryRepository.java`
-- [ ] T031 [P] [US2] [BE-TOUR] Create `TourRepository` in `backend/src/main/java/com/sunbooking/repository/TourRepository.java`
-- [ ] T032 [P] [US2] [BE-TOUR] Create `TourDepartureRepository` in `backend/src/main/java/com/sunbooking/repository/TourDepartureRepository.java`
+- [x] T031 [P] [US2] [BE-TOUR] Create `TourRepository` in `backend/src/main/java/com/sunbooking/repository/TourRepository.java`
+- [x] T032 [P] [US2] [BE-TOUR] Create `TourDepartureRepository` in `backend/src/main/java/com/sunbooking/repository/TourDepartureRepository.java`
 - [x] T033 [P] [US2] [BE-TOUR] Create tour/category DTOs in `backend/src/main/java/com/sunbooking/dto/tour/`
 - [x] T034 [US2] [BE-CATEGORY] Implement category listing in `backend/src/main/java/com/sunbooking/service/CategoryService.java`
-- [ ] T035 [US2] [BE-TOUR] Implement tour search/details in `backend/src/main/java/com/sunbooking/service/TourService.java`
+- [x] T035 [US2] [BE-TOUR] Implement tour search/details in `backend/src/main/java/com/sunbooking/service/TourService.java`
 - [x] T036 [US2] [BE-CATEGORY] Implement category APIs in `backend/src/main/java/com/sunbooking/controller/CategoryController.java`
-- [ ] T037 [US2] [BE-TOUR] Implement tour public APIs in `backend/src/main/java/com/sunbooking/controller/TourController.java`
+- [x] T037 [US2] [BE-TOUR] Implement tour public APIs in `backend/src/main/java/com/sunbooking/controller/TourController.java`
 - [ ] T038 [P] [US2] [FE-TOUR] Implement tour API client in `frontend/src/services/tourService.ts`
 - [ ] T039 [US2] [FE-TOUR] Create tour search page in `frontend/src/pages/tours/TourSearchPage.tsx`
 - [ ] T040 [US2] [FE-TOUR] Create tour details page in `frontend/src/pages/tours/TourDetailsPage.tsx`
@@ -151,8 +151,8 @@
 
 ## Phase 13: Admin Tour / Category Management (US5)
 
-- [ ] T114 [US5] [BE-ADMIN] Implement Admin Tour operations in `backend/src/main/java/com/sunbooking/service/AdminTourService.java`
-- [ ] T115 [US5] [BE-ADMIN] Implement `AdminTourController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminTourController.java`
+- [x] T114 [US5] [BE-ADMIN] Implement Admin Tour operations in `backend/src/main/java/com/sunbooking/service/AdminTourService.java`
+- [x] T115 [US5] [BE-ADMIN] Implement `AdminTourController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminTourController.java`
 - [x] T116 [US5] [BE-ADMIN] Implement `AdminCategoryController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminCategoryController.java`
 - [ ] T117 [P] [US5] [FE-ADMIN] Implement admin tours API client in `frontend/src/services/admin/adminTourService.ts`
 - [ ] T118 [P] [US5] [FE-ADMIN] Implement admin categories API client in `frontend/src/services/admin/adminCategoryService.ts`
