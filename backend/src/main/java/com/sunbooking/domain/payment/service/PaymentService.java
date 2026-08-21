@@ -1,14 +1,14 @@
 package com.sunbooking.domain.payment.service;
 
 import com.sunbooking.config.SePayConfig;
-import com.sunbooking.domain.payment.dto.PaymentResponse;
 import com.sunbooking.domain.booking.entity.Booking;
+import com.sunbooking.domain.payment.dto.PaymentResponse;
 import com.sunbooking.domain.payment.entity.Payment;
 import com.sunbooking.domain.payment.repository.PaymentRepository;
+import com.sunbooking.domain.tour.service.CapacityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.UUID;
 
 @Service
@@ -17,29 +17,33 @@ public class PaymentService {
 
     private final PaymentRepository paymentRepository;
     private final SePayConfig sePayConfig;
+    private final CapacityService capacityService;
 
     @Transactional
     public PaymentResponse createPayment(Booking booking) {
-        // 1. Generate unique reference for SePay matching
-        String reference = sePayConfig.getQrPrefix() + booking.getId()
-                + UUID.randomUUID().toString().substring(0, 4).toUpperCase();
+        // Reserve slots first to prevent overbooking
+        capacityService.reserveCapacity(
+                booking.getTourDeparture().getId(),
+                booking.getTravelers().size()
+        );
 
-        // 2. Create Payment entity (Status defaults to PENDING via @Builder.Default)
+        // Generate unique reference for SePay
+        String reference = sePayConfig.getQrPrefix() + booking.getId() +
+                UUID.randomUUID().toString().substring(0, 4).toUpperCase();
+
         Payment payment = Payment.builder()
                 .booking(booking)
-                .amount(booking.getTotalPrice()) // Price from Booking entity
+                .amount(booking.getTotalPrice())
                 .transactionReference(reference)
                 .paymentMethod("VIETQR")
                 .build();
 
         Payment savedPayment = paymentRepository.save(payment);
 
-        // 3. Generate VietQR Image URL
+        // SePay VietQR URL format
         String qrUrl = String.format("https://qr.sepay.vn/img?acc=%s&bank=%s&amount=%s&des=%s",
-                sePayConfig.getBankAccount(),
-                sePayConfig.getBankName(),
-                savedPayment.getAmount().toPlainString(),
-                reference);
+                sePayConfig.getBankAccount(), sePayConfig.getBankName(),
+                savedPayment.getAmount().toPlainString(), reference);
 
         return mapToResponse(savedPayment, qrUrl);
     }
