@@ -14,11 +14,16 @@
 - Q: What payment mechanism should be used and should users manage bank accounts? → A: Use SePay Test Mode + VietQR + Webhook, and drop the User manage bank account feature entirely.
 - Q: How should the system prevent overbooking when multiple users try to book the last available spots for a tour simultaneously? → A: Temporarily reserve capacity (e.g., 15 minutes) when the user initiates the SePay payment. If unpaid, release the capacity.
 
+### Session 2026-08-21
+- Q: Should Twitter be removed from the social login scope since recent code only implements Google and Facebook? → A: Yes, drop Twitter and focus on Google/Facebook.
+- Q: When an Admin deletes a Category, what should happen to the Tours associated with it? → A: Soft delete the Category, keeping Tours intact.
+- Q: Should the 15-minute capacity reservation limit be a strict system rule? → A: Yes, strict 15 minutes (configurable via properties).
+
 ## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Authentication and Profile Management (Priority: P1)
 
-Guests register an account to become a User. Users sign in, sign out, or authenticate using external social providers (Facebook, Twitter, or Google). Users can manage their user profile.
+Guests register an account to become a User. Users sign in, sign out, or authenticate using external social providers (Facebook or Google). Users can manage their user profile.
 
 **Why this priority**: Essential foundation for personalized interactions, bookings, and payments.
 
@@ -27,7 +32,7 @@ Guests register an account to become a User. Users sign in, sign out, or authent
 **Acceptance Scenarios**:
 
 1. **Given** a Guest, **When** they provide valid registration details, **Then** an account is created and they can sign in.
-2. **Given** an unauthenticated User, **When** they choose to sign in via Facebook, Twitter, or Google, **Then** they are authenticated and gain User privileges.
+2. **Given** an unauthenticated User, **When** they choose to sign in via Facebook or Google, **Then** they are authenticated and gain User privileges.
 3. **Given** an authenticated User, **When** they update their profile details, **Then** the information is saved.
 
 ---
@@ -94,7 +99,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 
 ### Edge Cases
 
-- What happens when a User attempts to pay for a tour but the SePay transaction times out (e.g., after 15 minutes)? (Capacity is automatically released, booking state becomes expired/failed).
+- What happens when a User attempts to pay for a tour but the SePay transaction times out? (Capacity is automatically released after a strict 15-minute limit, configurable via properties, and booking state becomes expired/failed).
 - How does the system handle concurrent booking requests for a tour with limited capacity? (Capacity is temporarily reserved when SePay payment is initiated).
 - What happens if a User tries to comment on a review that has just been deleted by an Admin or the author?
 
@@ -103,7 +108,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 ### Functional Requirements
 
 - **FR-001**: System MUST allow Guests to register a new account.
-- **FR-002**: System MUST allow Users to sign in using standard credentials or authenticate via Facebook, Twitter, or Google.
+- **FR-002**: System MUST allow Users to sign in using standard credentials or authenticate via Facebook or Google.
 - **FR-003**: System MUST allow Users to sign out.
 - **FR-004**: System MUST allow Users to manage their profile.
 - **FR-005**: System MUST allow Guests and Users to view tours, search tours, view tour reviews, and view information about places, food, and news as separate content entities.
@@ -112,6 +117,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 - **FR-008**: System MUST allow both Admins and Users to cancel a booked tour.
 - **FR-009**: System MUST allow Users to create new reviews, manage their own reviews, comment on reviews, comment on comments, like reviews, and rate tours.
 - **FR-010**: System MUST allow Admins to manage Users, Tours, booking requests, user reviews, revenue, and categories.
+- **FR-011**: System MUST soft-delete a Category when an Admin deletes it, keeping associated Tours intact.
 
 ### Key Entities
 
@@ -129,7 +135,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 
 ### Measurable Outcomes
 
-- **SC-001**: Guests can successfully register and Users can authenticate via all supported methods (Standard, Facebook, Twitter, Google).
+- **SC-001**: Guests can successfully register and Users can authenticate via all supported methods (Standard, Facebook, Google).
 - **SC-002**: Users can complete a tour booking and SePay payment flow without encountering blocking errors.
 - **SC-003**: Users can successfully search for tours and view associated reviews.
 - **SC-004**: Admins can successfully view and modify records for users, tours, bookings, categories, and reviews.
@@ -137,7 +143,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 
 ## Assumptions
 
-- External social authentication providers (Facebook, Twitter, Google) are available and function using standard integration patterns.
+- External social authentication providers (Facebook, Google) are available and function using standard integration patterns.
 - Payment is exclusively handled via SePay Test Mode using VietQR. The system relies on SePay Webhooks for payment confirmation. No additional payment methods are in scope.
 - Standard web application patterns apply for displaying lists (e.g., viewing tours or reviews).
 - "Manage" means the authorized role can perform the operations required by that approved business capability. It must not automatically be interpreted as full Create/Read/Update/Delete unless those operations are explicitly required.
