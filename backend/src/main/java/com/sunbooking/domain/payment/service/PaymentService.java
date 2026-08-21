@@ -26,7 +26,7 @@ public class PaymentService {
     public PaymentResponse createPayment(Booking booking) {
         // Reserve slots first to prevent overbooking
         capacityService.reserveCapacity(
-                booking.getTourDeparture().getId(),
+                booking.getDeparture().getId(),
                 booking.getTravelers().size()
         );
 
@@ -65,7 +65,7 @@ public class PaymentService {
 
             // Return slots to Tour Departure
             capacityService.releaseCapacity(
-                    payment.getBooking().getTourDeparture().getId(),
+                    payment.getBooking().getDeparture().getId(),
                     payment.getBooking().getTravelers().size()
             );
         }

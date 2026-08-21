@@ -78,13 +78,13 @@
 
 ## Phase 7: Booking (US3)
 
-- [ ] T059 [P] [US3] [BE-BOOKING] Create `Booking` entity in `backend/src/main/java/com/sunbooking/entity/Booking.java`
-- [ ] T060 [P] [US3] [BE-BOOKING] Create `BookingTraveler` entity in `backend/src/main/java/com/sunbooking/entity/BookingTraveler.java`
-- [ ] T061 [P] [US3] [BE-BOOKING] Create booking request/response DTOs in `backend/src/main/java/com/sunbooking/dto/booking/`
-- [ ] T062 [US3] [BE-BOOKING] Create `BookingRepository` in `backend/src/main/java/com/sunbooking/repository/BookingRepository.java`
-- [ ] T063 [US3] [BE-BOOKING] Implement booking orchestration and creation in `backend/src/main/java/com/sunbooking/service/BookingService.java`
-- [ ] T064 [US3] [BE-BOOKING] Implement booking checkout API in `backend/src/main/java/com/sunbooking/controller/BookingController.java`
-- [ ] T065 [US3] [BE-BOOKING] Implement booking history API in `backend/src/main/java/com/sunbooking/controller/BookingHistoryController.java`
+- [x] T059 [P] [US3] [BE-BOOKING] Create `Booking` entity in `backend/src/main/java/com/sunbooking/entity/Booking.java`
+- [x] T060 [P] [US3] [BE-BOOKING] Create `BookingTraveler` entity in `backend/src/main/java/com/sunbooking/entity/BookingTraveler.java`
+- [x] T061 [P] [US3] [BE-BOOKING] Create booking request/response DTOs in `backend/src/main/java/com/sunbooking/dto/booking/`
+- [x] T062 [US3] [BE-BOOKING] Create `BookingRepository` in `backend/src/main/java/com/sunbooking/repository/BookingRepository.java`
+- [x] T063 [US3] [BE-BOOKING] Implement booking orchestration and creation in `backend/src/main/java/com/sunbooking/service/BookingService.java`
+- [x] T064 [US3] [BE-BOOKING] Implement booking checkout API in `backend/src/main/java/com/sunbooking/controller/BookingController.java`
+- [x] T065 [US3] [BE-BOOKING] Implement booking history API in `backend/src/main/java/com/sunbooking/controller/BookingHistoryController.java`
 - [ ] T066 [P] [US3] [FE-BOOKING] Implement booking API client in `frontend/src/services/bookingService.ts`
 - [ ] T067 [US3] [FE-BOOKING] Create booking form component in `frontend/src/components/booking/BookingForm.tsx`
 - [ ] T068 [US3] [FE-BOOKING] Create user booking history page in `frontend/src/pages/user/BookingsPage.tsx`
