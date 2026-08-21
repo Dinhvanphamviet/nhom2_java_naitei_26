@@ -57,19 +57,19 @@
 
 ## Phase 6: Place / Food / News (US2)
 
-- [ ] T041 [P] [US2] [BE-CONTENT] Create `Place` entity in `backend/src/main/java/com/sunbooking/entity/Place.java`
-- [ ] T042 [P] [US2] [BE-CONTENT] Create `TourPlace` entity in `backend/src/main/java/com/sunbooking/entity/TourPlace.java`
-- [ ] T043 [P] [US2] [BE-CONTENT] Create `Food` entity in `backend/src/main/java/com/sunbooking/entity/Food.java`
-- [ ] T044 [P] [US2] [BE-CONTENT] Create `News` entity in `backend/src/main/java/com/sunbooking/entity/News.java`
-- [ ] T045 [P] [US2] [BE-CONTENT] Create `PlaceRepository` in `backend/src/main/java/com/sunbooking/repository/PlaceRepository.java`
-- [ ] T046 [P] [US2] [BE-CONTENT] Create `TourPlaceRepository` in `backend/src/main/java/com/sunbooking/repository/TourPlaceRepository.java`
-- [ ] T047 [P] [US2] [BE-CONTENT] Create `FoodRepository` in `backend/src/main/java/com/sunbooking/repository/FoodRepository.java`
-- [ ] T048 [P] [US2] [BE-CONTENT] Create `NewsRepository` in `backend/src/main/java/com/sunbooking/repository/NewsRepository.java`
-- [ ] T049 [P] [US2] [BE-CONTENT] Create content DTOs in `backend/src/main/java/com/sunbooking/dto/content/`
-- [ ] T050 [US2] [BE-CONTENT] Implement `PlaceService` in `backend/src/main/java/com/sunbooking/service/PlaceService.java`
-- [ ] T051 [US2] [BE-CONTENT] Implement `FoodService` in `backend/src/main/java/com/sunbooking/service/FoodService.java`
-- [ ] T052 [US2] [BE-CONTENT] Implement `NewsService` in `backend/src/main/java/com/sunbooking/service/NewsService.java`
-- [ ] T053 [US2] [BE-CONTENT] Implement `ContentController` for public access in `backend/src/main/java/com/sunbooking/controller/ContentController.java`
+- [x] T041 [P] [US2] [BE-CONTENT] Create `Place` entity in `backend/src/main/java/com/sunbooking/entity/Place.java`
+- [x] T042 [P] [US2] [BE-CONTENT] Create `TourPlace` entity in `backend/src/main/java/com/sunbooking/entity/TourPlace.java`
+- [x] T043 [P] [US2] [BE-CONTENT] Create `Food` entity in `backend/src/main/java/com/sunbooking/entity/Food.java`
+- [x] T044 [P] [US2] [BE-CONTENT] Create `News` entity in `backend/src/main/java/com/sunbooking/entity/News.java`
+- [x] T045 [P] [US2] [BE-CONTENT] Create `PlaceRepository` in `backend/src/main/java/com/sunbooking/repository/PlaceRepository.java`
+- [x] T046 [P] [US2] [BE-CONTENT] Create `TourPlaceRepository` in `backend/src/main/java/com/sunbooking/repository/TourPlaceRepository.java`
+- [x] T047 [P] [US2] [BE-CONTENT] Create `FoodRepository` in `backend/src/main/java/com/sunbooking/repository/FoodRepository.java`
+- [x] T048 [P] [US2] [BE-CONTENT] Create `NewsRepository` in `backend/src/main/java/com/sunbooking/repository/NewsRepository.java`
+- [x] T049 [P] [US2] [BE-CONTENT] Create content DTOs in `backend/src/main/java/com/sunbooking/dto/content/`
+- [x] T050 [US2] [BE-CONTENT] Implement `PlaceService` in `backend/src/main/java/com/sunbooking/service/PlaceService.java`
+- [x] T051 [US2] [BE-CONTENT] Implement `FoodService` in `backend/src/main/java/com/sunbooking/service/FoodService.java`
+- [x] T052 [US2] [BE-CONTENT] Implement `NewsService` in `backend/src/main/java/com/sunbooking/service/NewsService.java`
+- [x] T053 [US2] [BE-CONTENT] Implement `ContentController` for public access in `backend/src/main/java/com/sunbooking/controller/ContentController.java`
 - [ ] T054 [P] [US2] [FE-TOUR] Implement content API client in `frontend/src/services/contentService.ts`
 - [ ] T055 [P] [US2] [FE-TOUR] Create places page in `frontend/src/pages/content/PlacesPage.tsx`
 - [ ] T056 [P] [US2] [FE-TOUR] Create food presentation component in `frontend/src/components/content/FoodComponent.tsx`
