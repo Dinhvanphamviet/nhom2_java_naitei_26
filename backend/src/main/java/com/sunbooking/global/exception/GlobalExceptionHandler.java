@@ -73,7 +73,13 @@ public class GlobalExceptionHandler {
         response.put("timestamp", LocalDateTime.now());
         response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
         response.put("error", "Internal Server Error");
-        response.put("message", "An unexpected error occurred");
+        response.put("message", ex.getClass().getSimpleName() + ": " + ex.getMessage());
+
+        // Show root cause if available
+        Throwable cause = ex.getCause();
+        if (cause != null) {
+            response.put("cause", cause.getClass().getSimpleName() + ": " + cause.getMessage());
+        }
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }

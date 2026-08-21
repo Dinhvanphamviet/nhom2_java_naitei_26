@@ -44,7 +44,10 @@ public class AuthController {
 
         response.addCookie(cookie);
 
-        return ResponseEntity.ok(builder.getUserResponse());
+        UserResponse userResponse = builder.getUserResponse();
+        userResponse.setToken(token);
+
+        return ResponseEntity.ok(userResponse);
     }
 
     @PostMapping("/logout")

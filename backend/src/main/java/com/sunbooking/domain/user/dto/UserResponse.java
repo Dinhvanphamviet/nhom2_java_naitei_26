@@ -9,6 +9,7 @@ public class UserResponse {
     private String avatar;
     private String role;
     private String status;
+    private String token;
 
     public UserResponse(Long userId, String username, String fullName, String email, String phone, String avatar, String role, String status) {
         this.userId = userId;
@@ -19,6 +20,18 @@ public class UserResponse {
         this.avatar = avatar;
         this.role = role;
         this.status = status;
+    }
+
+    public UserResponse(Long userId, String username, String fullName, String email, String phone, String avatar, String role, String status, String token) {
+        this.userId = userId;
+        this.username = username;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
+        this.avatar = avatar;
+        this.role = role;
+        this.status = status;
+        this.token = token;
     }
 
     public Long getUserId() {
@@ -83,5 +96,13 @@ public class UserResponse {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
