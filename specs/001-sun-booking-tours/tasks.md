@@ -110,15 +110,15 @@
 
 ## Phase 9: Reviews / Rating (US4)
 
-- [ ] T085 [P] [US4] [BE-REVIEW] Create `Review` entity in `backend/src/main/java/com/sunbooking/entity/Review.java`
-- [ ] T086 [P] [US4] [BE-REVIEW] Create `ReviewImage` entity in `backend/src/main/java/com/sunbooking/entity/ReviewImage.java`
-- [ ] T087 [P] [US4] [BE-REVIEW] Create review DTOs in `backend/src/main/java/com/sunbooking/dto/review/`
-- [ ] T088 [US4] [BE-REVIEW] Create `ReviewRepository` in `backend/src/main/java/com/sunbooking/repository/ReviewRepository.java`
-- [ ] T089 [US4] [BE-REVIEW] Implement review submission and validation in `backend/src/main/java/com/sunbooking/service/ReviewService.java`
-- [ ] T090 [US4] [BE-REVIEW] Implement review APIs in `backend/src/main/java/com/sunbooking/controller/ReviewController.java`
-- [ ] T091 [P] [US4] [FE-REVIEW] Implement review API client in `frontend/src/services/reviewService.ts`
-- [ ] T092 [P] [US4] [FE-REVIEW] Create review submission form in `frontend/src/components/reviews/ReviewForm.tsx`
-- [ ] T093 [US4] [FE-REVIEW] Create review list component in `frontend/src/components/reviews/ReviewList.tsx`
+- [X] T085 [P] [US4] [BE-REVIEW] Create `Review` entity in `backend/src/main/java/com/sunbooking/entity/Review.java`
+- [X] T086 [P] [US4] [BE-REVIEW] Create `ReviewImage` entity in `backend/src/main/java/com/sunbooking/entity/ReviewImage.java`
+- [X] T087 [P] [US4] [BE-REVIEW] Create review DTOs in `backend/src/main/java/com/sunbooking/dto/review/`
+- [X] T088 [US4] [BE-REVIEW] Create `ReviewRepository` in `backend/src/main/java/com/sunbooking/repository/ReviewRepository.java`
+- [X] T089 [US4] [BE-REVIEW] Implement review submission and validation in `backend/src/main/java/com/sunbooking/service/ReviewService.java`
+- [X] T090 [US4] [BE-REVIEW] Implement review APIs in `backend/src/main/java/com/sunbooking/controller/ReviewController.java`
+- [X] T091 [P] [US4] [FE-REVIEW] Implement review API client in `frontend/src/services/reviewService.ts`
+- [X] T092 [P] [US4] [FE-REVIEW] Create review submission form in `frontend/src/components/reviews/ReviewForm.tsx`
+- [X] T093 [US4] [FE-REVIEW] Create review list component in `frontend/src/components/reviews/ReviewList.tsx`
 
 ## Phase 10: Comments / Replies / Likes (US4)
 
