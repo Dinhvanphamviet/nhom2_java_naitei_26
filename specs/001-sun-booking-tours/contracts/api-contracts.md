@@ -22,9 +22,24 @@
 
 ## 4. Places, Food, and News (`/api/content`)
 
-- `GET /api/places`: View place information.
-- `GET /api/food`: View food information.
-- `GET /api/news`: View news content.
+- `GET /api/places`: Publicly list places.
+- `GET /api/places/{id}`: Publicly view one place.
+- `GET /api/food`: Publicly list food information.
+- `GET /api/food/{id}`: Publicly view one food item.
+- `GET /api/news`: Publicly list news content.
+- `GET /api/news/{id}`: Publicly view one news item.
+- `GET /api/admin/content/places`: Admin list places.
+- `POST /api/admin/content/places`: Admin create a place.
+- `PUT /api/admin/content/places/{id}`: Admin update a place.
+- `DELETE /api/admin/content/places/{id}`: Admin soft-delete a place.
+- `GET /api/admin/content/food`: Admin list food information.
+- `POST /api/admin/content/food`: Admin create a food item.
+- `PUT /api/admin/content/food/{id}`: Admin update a food item.
+- `DELETE /api/admin/content/food/{id}`: Admin soft-delete a food item.
+- `GET /api/admin/content/news`: Admin list news content.
+- `POST /api/admin/content/news`: Admin create a news item.
+- `PUT /api/admin/content/news/{id}`: Admin update a news item.
+- `DELETE /api/admin/content/news/{id}`: Admin soft-delete a news item.
 
 ## 5. Bookings (`/api/bookings`)
 

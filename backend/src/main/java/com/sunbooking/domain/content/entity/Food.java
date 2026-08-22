@@ -2,12 +2,13 @@ package com.sunbooking.domain.content.entity;
 
 import java.math.BigDecimal;
 
+import com.sunbooking.global.common.BaseEntity;
+
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import com.sunbooking.global.common.BaseEntity;
 
 @Entity
 @Table(name = "food")
@@ -56,5 +57,29 @@ public class Food extends BaseEntity {
 
     public String getStatus() {
         return status;
+    }
+
+    public void setPlaceId(Long placeId) {
+        this.placeId = placeId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

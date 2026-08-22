@@ -3,6 +3,7 @@ package com.sunbooking.domain.content.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,13 +33,28 @@ public class ContentController {
         return placeService.findAll();
     }
 
+    @GetMapping("/places/{id}")
+    public PlaceResponse getPlace(@PathVariable Long id) {
+        return placeService.findById(id);
+    }
+
     @GetMapping("/food")
     public List<FoodResponse> listFood() {
         return foodService.findAll();
     }
 
+    @GetMapping("/food/{id}")
+    public FoodResponse getFood(@PathVariable Long id) {
+        return foodService.findById(id);
+    }
+
     @GetMapping("/news")
     public List<NewsResponse> listNews() {
         return newsService.findAll();
+    }
+
+    @GetMapping("/news/{id}")
+    public NewsResponse getNews(@PathVariable Long id) {
+        return newsService.findById(id);
     }
 }

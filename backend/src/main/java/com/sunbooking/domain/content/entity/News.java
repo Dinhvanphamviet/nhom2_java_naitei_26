@@ -2,12 +2,13 @@ package com.sunbooking.domain.content.entity;
 
 import java.time.LocalDateTime;
 
+import com.sunbooking.global.common.BaseEntity;
+
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import com.sunbooking.global.common.BaseEntity;
 
 @Entity
 @Table(name = "news")
@@ -63,5 +64,33 @@ public class News extends BaseEntity {
 
     public LocalDateTime getPublishedAt() {
         return publishedAt;
+    }
+
+    public void setAuthorId(Long authorId) {
+        this.authorId = authorId;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setPublishedAt(LocalDateTime publishedAt) {
+        this.publishedAt = publishedAt;
     }
 }

@@ -2,11 +2,9 @@ package com.sunbooking.global.security;
 
 import java.util.List;
 
-import com.sunbooking.global.security.oauth2.CustomOAuth2UserService;
-import com.sunbooking.global.security.oauth2.OAuth2AuthenticationFailureHandler;
-import com.sunbooking.global.security.oauth2.OAuth2AuthenticationSuccessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -20,7 +18,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.http.HttpMethod;
+
+import com.sunbooking.global.security.oauth2.CustomOAuth2UserService;
+import com.sunbooking.global.security.oauth2.OAuth2AuthenticationFailureHandler;
+import com.sunbooking.global.security.oauth2.OAuth2AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -71,8 +72,9 @@ public class SecurityConfig {
                                                 .permitAll()
                                                 .requestMatchers("/api/auth/**", "/oauth2/**", "/login/oauth2/code/**")
                                                 .permitAll()
-                                                .requestMatchers(HttpMethod.GET, "/api/places", "/api/food",
-                                                                "/api/news")
+                                                .requestMatchers(HttpMethod.GET, "/api/places", "/api/places/**",
+                                                                "/api/food", "/api/food/**", "/api/news",
+                                                                "/api/news/**")
                                                 .permitAll()
                                                 .requestMatchers(HttpMethod.GET, "/api/tours/**",
                                                                 "/api/categories/**")
