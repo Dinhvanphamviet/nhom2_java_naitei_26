@@ -27,7 +27,7 @@ public class PaymentService {
         // Reserve slots first to prevent overbooking
         capacityService.reserveCapacity(
                 booking.getDeparture().getId(),
-                booking.getTravelers().size()
+                booking.getNumberOfPeople()
         );
 
         // Generate unique reference for SePay
@@ -66,7 +66,7 @@ public class PaymentService {
             // Return slots to Tour Departure
             capacityService.releaseCapacity(
                     payment.getBooking().getDeparture().getId(),
-                    payment.getBooking().getTravelers().size()
+                    payment.getBooking().getNumberOfPeople()
             );
         }
     }
