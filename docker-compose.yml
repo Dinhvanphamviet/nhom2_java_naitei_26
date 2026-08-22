@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: sun-booking-backend
+    environment:
+      APP_JWT_SECRET: 7c6827d41f318a20117ca6d64b3fa1bd2a78ad09fa05a7bd9cacb017d115fe56
+      APP_JWT_EXPIRATION_MS: 86400000
+      APP_OAUTH2_AUTHORIZED_REDIRECT_URIS: http://localhost:5173/oauth2/redirect
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: sun-booking-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+
