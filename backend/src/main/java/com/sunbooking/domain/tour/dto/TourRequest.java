@@ -36,6 +36,7 @@ public record TourRequest(
     }
 
     public record TourDepartureRequest(
+            Long id,
             @NotNull LocalDate departureDate,
             @NotNull LocalDate returnDate,
             @NotNull @DecimalMin(value = "0.0", inclusive = true) BigDecimal price,
