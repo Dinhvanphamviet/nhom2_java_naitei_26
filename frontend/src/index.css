@@ -5,10 +5,10 @@
   --font-serif: "Playfair Display", ui-serif, Georgia, serif;
 
   /* --- BRAND COLORS --- */
-  --color-brand-light: #fbbf24; /* amber-400 */
-  --color-brand: #f59e0b;       /* amber-500 */
-  --color-brand-dark: #d97706;  /* amber-600 */
-  --color-brand-darker: #b45309;/* amber-700 */
+  --color-brand-light: #ff4d3b; /* Sun red light */
+  --color-brand: #ff1d06;       /* Sun red */
+  --color-brand-dark: #d91404;  /* Sun red dark */
+  --color-brand-darker: #b31003;/* Sun red darker */
 
   /* --- SEMANTIC COLORS --- */
   --color-background: #f9fafb;  /* slate-50 */

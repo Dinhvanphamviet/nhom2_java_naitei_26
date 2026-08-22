@@ -29,7 +29,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-foreground border-b border-white/5">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-200">
       <div className="w-full px-6 md:px-10">
         <div className="flex items-center h-16">
           {/* Logo */}
@@ -38,7 +38,7 @@ export function Navbar() {
               <div className="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-brand to-brand-dark rounded-lg">
                 <SunIcon className="w-4 h-4 text-white" />
               </div>
-              <span className="font-serif text-white text-lg tracking-tight leading-none">
+              <span className="font-serif text-slate-900 text-lg tracking-tight leading-none">
                 SUN <span className="text-brand">Booking</span> Tours
               </span>
             </Link>
@@ -53,7 +53,7 @@ export function Navbar() {
                 className={`whitespace-nowrap px-3.5 py-1 text-sm font-medium transition-colors border-b-2 ${
                   isActive(link.to)
                     ? "text-brand border-brand"
-                    : "text-white/70 border-transparent hover:text-white"
+                    : "text-slate-600 border-transparent hover:text-brand"
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
-                  className="flex items-center gap-2 text-white"
+                  className="flex items-center gap-2 text-slate-700 hover:text-brand transition-colors"
                 >
                   <div className="w-8 h-8 rounded-full bg-brand flex items-center justify-center font-bold text-sm text-white">
                     {user.fullName?.charAt(0) ||
@@ -142,7 +142,7 @@ export function Navbar() {
               <div className="flex items-center gap-4">
                 <Link
                   to="/login"
-                  className="text-sm font-medium text-white/80 hover:text-white"
+                  className="text-sm font-medium text-slate-600 hover:text-brand transition-colors"
                 >
                   Đăng nhập
                 </Link>
@@ -158,7 +158,7 @@ export function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-slate-700 hover:text-brand transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg
@@ -188,32 +188,32 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden border-t border-white/10 py-3">
+          <div className="md:hidden border-t border-slate-100 py-3 bg-white">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`block px-2 py-2 text-base ${isActive(link.to) ? "font-semibold text-brand" : "text-white/80"}`}
+                className={`block px-2 py-2 text-base ${isActive(link.to) ? "font-semibold text-brand" : "text-slate-600 hover:text-brand"}`}
               >
                 {link.label}
               </Link>
             ))}
 
-            <div className="border-t border-white/10 mt-3 pt-3">
+            <div className="border-t border-slate-100 mt-3 pt-3">
               {user ? (
                 <>
                   <Link
                     to="/bookings"
                     onClick={() => setMenuOpen(false)}
-                    className="block px-2 py-2 text-base text-white/80"
+                    className="block px-2 py-2 text-base text-slate-700 hover:text-brand"
                   >
                     Lịch sử đặt Tour
                   </Link>
                   <Link
                     to="/profile"
                     onClick={() => setMenuOpen(false)}
-                    className="block px-2 py-2 text-base text-white/80"
+                    className="block px-2 py-2 text-base text-slate-700 hover:text-brand"
                   >
                     Tài khoản
                   </Link>
@@ -229,7 +229,7 @@ export function Navbar() {
                   <Link
                     to="/login"
                     onClick={() => setMenuOpen(false)}
-                    className="px-2 py-2 text-base text-white/80 text-center border border-white/20 rounded-lg"
+                    className="px-2 py-2 text-base text-slate-700 text-center border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors"
                   >
                     Đăng nhập
                   </Link>

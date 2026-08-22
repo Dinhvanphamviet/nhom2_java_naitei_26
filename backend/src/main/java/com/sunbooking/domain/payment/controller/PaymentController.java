@@ -1,7 +1,6 @@
 package com.sunbooking.domain.payment.controller;
 
 import com.sunbooking.domain.payment.entity.Payment;
-import com.sunbooking.domain.payment.entity.PaymentStatus;
 import com.sunbooking.domain.payment.repository.PaymentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
