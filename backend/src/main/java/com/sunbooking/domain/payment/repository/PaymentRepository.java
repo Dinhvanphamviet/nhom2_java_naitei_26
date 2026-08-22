@@ -16,4 +16,7 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
 
     // Find pending payments for cleanup job
     List<Payment> findByStatusAndCreatedAtBefore(PaymentStatus status, LocalDateTime dateTime);
+
+    // Find the latest payment for a booking
+    Optional<Payment> findTopByBooking_IdOrderByCreatedAtDesc(Long bookingId);
 }
