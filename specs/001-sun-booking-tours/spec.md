@@ -19,6 +19,9 @@
 - Q: When an Admin deletes a Category, what should happen to the Tours associated with it? → A: Soft delete the Category, keeping Tours intact.
 - Q: Should the 15-minute capacity reservation limit be a strict system rule? → A: Yes, strict 15 minutes (configurable via properties).
 
+### Session 2026-08-22
+- Q: What specific actions can an Admin perform when managing a booking? → A: Admin can view lists, view details, search/filter (status, tour, departure, booking date, customer), view payment and travelers, cancel bookings, and update booking status when needed. Admin cannot create, edit details (travelers, price, guest count), delete bookings, or manually confirm bookings.
+
 ## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Authentication and Profile Management (Priority: P1)
@@ -93,7 +96,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 **Acceptance Scenarios**:
 
 1. **Given** an Admin, **When** they manage tours or categories, **Then** the updates are immediately reflected on the platform for Guests and Users.
-2. **Given** an Admin reviewing booking requests, **When** they process a request, **Then** the Booking is updated according to the Admin's authorized action.
+2. **Given** an Admin reviewing booking requests, **When** they process a request, **Then** they can view booking details, search/filter, cancel bookings, and update status, but cannot edit booking data, create new bookings, delete bookings, or manually confirm bookings.
 
 ---
 
@@ -116,7 +119,7 @@ Admins manage users, tours, booking requests, user reviews, revenue, and categor
 - **FR-007**: System MUST allow Users to pay for a tour exclusively via SePay Test Mode + VietQR + Webhook.
 - **FR-008**: System MUST allow both Admins and Users to cancel a booked tour.
 - **FR-009**: System MUST allow Users to create new reviews, manage their own reviews, comment on reviews, comment on comments, like reviews, and rate tours.
-- **FR-010**: System MUST allow Admins to manage Users, Tours, booking requests, user reviews, revenue, and categories.
+- **FR-010**: System MUST allow Admins to manage Users, Tours, booking requests, user reviews, revenue, and categories. For booking requests specifically, Admins CAN view, search, filter, cancel, and update status, but CANNOT create, edit details, delete, or manually confirm bookings.
 - **FR-011**: System MUST soft-delete a Category when an Admin deletes it, keeping associated Tours intact.
 
 ### Key Entities

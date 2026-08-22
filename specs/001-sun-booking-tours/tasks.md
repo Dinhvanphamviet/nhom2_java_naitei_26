@@ -161,8 +161,8 @@
 
 ## Phase 14: Admin Booking Management (US5)
 
-- [ ] T121 [US5] [BE-ADMIN] Implement Admin Booking operations in `backend/src/main/java/com/sunbooking/service/AdminBookingService.java`
-- [ ] T122 [US5] [BE-ADMIN] Implement `AdminBookingController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminBookingController.java`
+- [x] T121 [US5] [BE-ADMIN] Implement Admin Booking operations in `backend/src/main/java/com/sunbooking/service/AdminBookingService.java`
+- [x] T122 [US5] [BE-ADMIN] Implement `AdminBookingController` in `backend/src/main/java/com/sunbooking/controller/admin/AdminBookingController.java`
 - [ ] T123 [P] [US5] [FE-ADMIN] Implement admin bookings API client in `frontend/src/services/admin/adminBookingService.ts`
 - [ ] T124 [US5] [FE-ADMIN] Create Admin bookings page in `frontend/src/pages/admin/AdminBookingsPage.tsx`
 
